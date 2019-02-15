@@ -7,18 +7,16 @@ class Student
       string name;
       int marks[3];
       char grade;
-  
-  public:
-    Student();
-    
+   
     void set_data(string n, int m1, int m2, int m3)
     {
         name  = n;
         marks[0] = m1;
-        marks[2] = m2;
-        marks[3] = m3;
+        marks[1] = m2;
+        marks[2] = m3;
     }
 
+public:
     void get_data()
     {
         string name;
@@ -33,7 +31,7 @@ class Student
     void display()
     {
         cout << "Name: " << name << endl;
-        cout << "Marks obtained: " << marks[1] << marks[2] << marks[3] << endl;
+        cout << "Marks obtained: " << marks[0] << " " << marks[1] << " " <<  marks[2] << endl;
     }
 
     friend float markAvg(Student student);
@@ -57,7 +55,7 @@ int main()
     Student st;
     st.get_data();
     st.display();
-    cout<<"The average is: "<<markAvg(st);
+    cout<<"The average is: "<<markAvg(st)<<endl;
 
     return 0;
 }
